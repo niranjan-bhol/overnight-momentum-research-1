@@ -1,18 +1,25 @@
 import json
 import time
 import requests
+import queue
+import threading
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-INPUT_PATH = BASE_DIR / "data" / "symbol" / "NIFTY_50.txt"
+INPUT_PATH = BASE_DIR / "data" / "symbol" / "NIFTY_TOTAL_MARKET.txt"
 OUTPUT_DIR = BASE_DIR / "data" / "historical" / "json"
 OUTPUT_DIR_PATH = f"{BASE_DIR.name}/{OUTPUT_DIR.relative_to(BASE_DIR)}"
 
-START_DATE = date(2011, 1, 1)
+START_DATE = date(2011, 6, 1)
+END_DATE = date(2026, 9, 30)  # None = up to yesterday, or set e.g. date(2025, 12, 31)
 CHUNK_DAYS = 90
 CHUNK_RETRIES = 3
 SYMBOL_RETRIES = 3
+CHUNK_SLEEP = 0.3
+MAX_WORKERS = 10
+SESSION_REFRESH_EVERY = 50
 
 API_URL = "https://www.nseindia.com/api/historicalOR/generateSecurityWiseHistoricalData"
 
@@ -29,7 +36,7 @@ HEADERS = {
 
 def read_symbols(path):
     if not path.exists():
-        raise FileNotFoundError(f"Symbol file not found: {path}")
+        raise FileNotFoundError(f"Symbol file not found")
     with open(path) as f:
         return [line.strip() for line in f if line.strip()]
 
@@ -84,8 +91,8 @@ def fetch_chunk(session, params, chunk_retries):
 
 def fetch_symbol(session, symbol, chunk_retries=CHUNK_RETRIES):
     all_records = []
-    end_date = date.today() - timedelta(days=1)
-    for from_date, to_date in date_chunks(START_DATE, end_date, CHUNK_DAYS):
+    end_date = END_DATE or (date.today() - timedelta(days=1))
+    for chunk_num, (from_date, to_date) in enumerate(date_chunks(START_DATE, end_date, CHUNK_DAYS), start=1):
         params = {
             "from": from_date,
             "to": to_date,
@@ -94,69 +101,98 @@ def fetch_symbol(session, symbol, chunk_retries=CHUNK_RETRIES):
             "series": "EQ",
         }
         
+        if chunk_num % SESSION_REFRESH_EVERY == 0:
+            session = get_session()
+        
         session, records = fetch_chunk(session, params, chunk_retries)
         all_records.extend(records)
         
-        time.sleep(0.5)
+        time.sleep(CHUNK_SLEEP)
     return session, {"data": all_records}
 
 def save_json(data, path):
     with open(path, "w") as f:
         json.dump(data, f, indent=2)
 
-def main():
-    try:
-        symbols = read_symbols(INPUT_PATH)
-        total = len(symbols)
-        width = len(str(total))
-        
-        clear_output_dir()
-        print(f"\nDownloading data for {total} symbols ...\n")
-        
-        try:
-            session = get_session()
-        except requests.RequestException:
-            print("Failed to connect to NSE")
-            return
-        
-        success = 0
-        
-        for i, symbol in enumerate(symbols, start=1):
-            label = f"[{i:0{width}}/{total}]  {symbol:<12}"
-            output_path = OUTPUT_DIR / f"{symbol}.json"
-            
-            if i % 50 == 1 and i > 1:
-                print(f"\nRefreshing session ...\n")
-                try:
-                    session = get_session()
-                except requests.RequestException:
-                    print("Failed to refresh session")
-                    break
-            
-            for attempt in range(SYMBOL_RETRIES):
-                try:
-                    if attempt > 0:
-                        session = get_session()
-                    session, data = fetch_symbol(session, symbol)
-                    save_json(data, output_path)
-                    count = len(data.get("data", []))
-                    suffix = " (retry)" if attempt > 0 else ""
-                    print(f"{label}->  {count} records{suffix}")
-                    success += 1
-                    break
-                except Exception:
-                    pass
-            else:
-                print(f"{label}->  ERROR")
-            
-            time.sleep(1)
-        
-        print()
-        print(f"Downloaded data for {success}/{total} symbols")
-        print(f"Saved to : {OUTPUT_DIR_PATH}")
+print_lock = threading.Lock()
+progress = {"success": 0, "next_to_print": 1, "buffer": {}}
+
+def emit(index, message):
+    with print_lock:
+        progress["buffer"][index] = message
+        while progress["next_to_print"] in progress["buffer"]:
+            print(progress["buffer"].pop(progress["next_to_print"]))
+            progress["next_to_print"] += 1
+
+def process_symbol(index, symbol, total, width, session):
+    label = f"[{index:0{width}}/{total}]  {symbol:<12}"
+    output_path = OUTPUT_DIR / f"{symbol}.json"
     
-    except KeyboardInterrupt:
-        print("\n\nOperation cancelled")
+    for attempt in range(SYMBOL_RETRIES):
+        try:
+            if attempt > 0:
+                session = get_session()
+            session, data = fetch_symbol(session, symbol)
+            save_json(data, output_path)
+            count = len(data.get("data", []))
+            suffix = " (retry)" if attempt > 0 else ""
+            emit(index, f"{label}->  {count:>4} records{suffix}")
+            with print_lock:
+                progress["success"] += 1
+            return session
+        except Exception:
+            pass
+    
+    emit(index, f"{label}->  ERROR")
+    return session
+
+def worker(task_queue, total, width):
+    session = get_session()
+    symbols_done = 0
+    
+    while True:
+        try:
+            index, symbol = task_queue.get_nowait()
+        except queue.Empty:
+            return
+        try:
+            if symbols_done > 0 and symbols_done % SESSION_REFRESH_EVERY == 0:
+                session = get_session()
+            session = process_symbol(index, symbol, total, width, session)
+            symbols_done += 1
+        finally:
+            task_queue.task_done()
+
+def main():
+    symbols = read_symbols(INPUT_PATH)
+    total = len(symbols)
+    width = len(str(total))
+    
+    clear_output_dir()
+    print(f"\nDownloading data for {total} symbols using {MAX_WORKERS} parallel workers ...\n")
+    
+    try:
+        get_session()
+    except requests.RequestException:
+        print("Failed to connect to NSE")
+        return
+    
+    task_queue = queue.Queue()
+    for i, symbol in enumerate(symbols, start=1):
+        task_queue.put((i, symbol))
+    
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = [
+            executor.submit(worker, task_queue, total, width)
+            for _ in range(MAX_WORKERS)
+        ]
+        for future in futures:
+            future.result()
+    
+    success = progress["success"]
+    print()
+    print(f"Downloaded data for {success}/{total} symbols")
+    print(f"Saved to : {OUTPUT_DIR_PATH}")
 
 if __name__ == "__main__":
     main()
