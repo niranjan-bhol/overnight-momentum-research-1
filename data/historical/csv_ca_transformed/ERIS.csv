@@ -1,8 +1,8 @@
-exDate,corp_action,info,amount
-12-Jul-2019,buyback,,
-19-Mar-2020,dividend,interim,2.87
-13-Aug-2020,dividend,interim,5.50
-05-Aug-2021,dividend,interim,6.01
-11-Aug-2022,dividend,interim,7.35
-13-Feb-2025,dividend,interim,7.35
-29-May-2026,dividend,interim,7.21
+ex_date,corp_action,info,amount
+2019-07-12,buyback,,
+2020-03-19,dividend,interim,2.87
+2020-08-13,dividend,interim,5.50
+2021-08-05,dividend,interim,6.01
+2022-08-11,dividend,interim,7.35
+2025-02-13,dividend,interim,7.35
+2026-05-29,dividend,interim,7.21

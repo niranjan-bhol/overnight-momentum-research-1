@@ -1,4 +1,4 @@
-exDate,corp_action,info,amount
-24-Jun-2022,bonus,1:1,
-26-Sep-2025,bonus,1:1,
-26-Sep-2025,split,4:2,
+ex_date,corp_action,info,amount
+2022-06-24,bonus,1:1,
+2025-09-26,bonus,1:1,
+2025-09-26,split,4:2,

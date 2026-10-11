@@ -1,3 +1,3 @@
-exDate,corp_action,info,amount
-14-Nov-2025,split,10:1,
-15-Sep-2026,dividend,,0.25
+ex_date,corp_action,info,amount
+2025-11-14,split,10:1,
+2026-09-15,dividend,,0.25

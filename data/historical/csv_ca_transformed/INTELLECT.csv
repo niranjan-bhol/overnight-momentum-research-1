@@ -1,7 +1,7 @@
-exDate,corp_action,info,amount
-17-Jul-2017,rights,5:22,81.00
-21-Jul-2022,dividend,,2.50
-21-Jul-2023,dividend,,2.50
-19-Jun-2024,dividend,,3.50
-18-Jul-2025,dividend,special,7.00
-24-Jul-2026,dividend,special,7.00
+ex_date,corp_action,info,amount
+2017-07-17,rights,5:22,81.00
+2022-07-21,dividend,,2.50
+2023-07-21,dividend,,2.50
+2024-06-19,dividend,,3.50
+2025-07-18,dividend,special,7.00
+2026-07-24,dividend,special,7.00

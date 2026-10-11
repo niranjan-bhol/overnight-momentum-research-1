@@ -1,3 +1,3 @@
-exDate,corp_action,info,amount
-19-Nov-2019,dividend,interim,1.60
-26-Mar-2020,dividend,interim,1.60
+ex_date,corp_action,info,amount
+2019-11-19,dividend,interim,1.60
+2020-03-26,dividend,interim,1.60

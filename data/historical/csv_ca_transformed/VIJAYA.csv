@@ -1,6 +1,6 @@
-exDate,corp_action,info,amount
-20-Sep-2022,dividend,,1.00
-13-Sep-2023,dividend,,1.00
-30-Aug-2024,dividend,,1.00
-29-Aug-2025,dividend,,2.00
-16-Sep-2026,dividend,,2.00
+ex_date,corp_action,info,amount
+2022-09-20,dividend,,1.00
+2023-09-13,dividend,,1.00
+2024-08-30,dividend,,1.00
+2025-08-29,dividend,,2.00
+2026-09-16,dividend,,2.00

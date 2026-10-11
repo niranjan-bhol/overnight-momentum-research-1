@@ -1,2 +1,2 @@
-exDate,corp_action,info,amount
-10-Jul-2026,dividend,,0.20
+ex_date,corp_action,info,amount
+2026-07-10,dividend,,0.20

@@ -1,7 +1,7 @@
-exDate,corp_action,info,amount
-25-Jul-2017,dividend,,6.00
-19-Jul-2018,dividend,,9.00
-19-Jul-2019,dividend,,9.00
-05-Apr-2023,rights,29:54,265.00
-01-Aug-2025,dividend,,5.00
-31-Jul-2026,dividend,,8.00
+ex_date,corp_action,info,amount
+2017-07-25,dividend,,6.00
+2018-07-19,dividend,,9.00
+2019-07-19,dividend,,9.00
+2023-04-05,rights,29:54,265.00
+2025-08-01,dividend,,5.00
+2026-07-31,dividend,,8.00

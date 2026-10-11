@@ -1,7 +1,7 @@
-exDate,corp_action,info,amount
-21-Sep-2022,dividend,,2.00
-31-Oct-2022,dividend,interim,2.00
-22-Sep-2023,dividend,,2.00
-20-Sep-2024,dividend,,3.00
-22-Sep-2025,dividend,,3.00
-17-Sep-2026,dividend,,3.00
+ex_date,corp_action,info,amount
+2022-09-21,dividend,,2.00
+2022-10-31,dividend,interim,2.00
+2023-09-22,dividend,,2.00
+2024-09-20,dividend,,3.00
+2025-09-22,dividend,,3.00
+2026-09-17,dividend,,3.00

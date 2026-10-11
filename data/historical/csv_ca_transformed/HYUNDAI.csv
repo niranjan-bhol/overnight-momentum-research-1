@@ -1,3 +1,3 @@
-exDate,corp_action,info,amount
-05-Aug-2025,dividend,,21.00
-05-Aug-2026,dividend,,21.00
+ex_date,corp_action,info,amount
+2025-08-05,dividend,,21.00
+2026-08-05,dividend,,21.00

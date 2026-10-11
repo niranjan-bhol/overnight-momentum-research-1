@@ -1,4 +1,4 @@
-exDate,corp_action,info,amount
-20-Nov-2017,dividend,interim,0.20
-21-Aug-2019,dividend,,0.20
-08-Sep-2021,dividend,,0.50
+ex_date,corp_action,info,amount
+2017-11-20,dividend,interim,0.20
+2019-08-21,dividend,,0.20
+2021-09-08,dividend,,0.50

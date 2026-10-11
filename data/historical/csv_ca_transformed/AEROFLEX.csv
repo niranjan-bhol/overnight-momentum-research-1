@@ -1,4 +1,4 @@
-exDate,corp_action,info,amount
-28-Jun-2024,dividend,,0.25
-29-Jul-2025,dividend,,0.30
-14-Jul-2026,dividend,,0.40
+ex_date,corp_action,info,amount
+2024-06-28,dividend,,0.25
+2025-07-29,dividend,,0.30
+2026-07-14,dividend,,0.40

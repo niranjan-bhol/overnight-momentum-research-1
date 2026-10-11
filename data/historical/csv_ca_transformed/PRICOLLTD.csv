@@ -1,5 +1,5 @@
-exDate,corp_action,info,amount
-14-Aug-2017,dividend,,1.00
-14-Aug-2018,dividend,,1.00
-24-Nov-2020,rights,2:7,29.00
-14-Nov-2025,dividend,interim,2.00
+ex_date,corp_action,info,amount
+2017-08-14,dividend,,1.00
+2018-08-14,dividend,,1.00
+2020-11-24,rights,2:7,29.00
+2025-11-14,dividend,interim,2.00

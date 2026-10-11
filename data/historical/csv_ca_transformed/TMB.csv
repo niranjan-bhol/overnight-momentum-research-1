@@ -1,6 +1,6 @@
-exDate,corp_action,info,amount
-24-Feb-2023,dividend,interim,5.00
-29-Aug-2023,dividend,,5.00
-20-Sep-2024,dividend,,10.00
-01-Aug-2025,dividend,,11.00
-12-Jun-2026,dividend,,12.50
+ex_date,corp_action,info,amount
+2023-02-24,dividend,interim,5.00
+2023-08-29,dividend,,5.00
+2024-09-20,dividend,,10.00
+2025-08-01,dividend,,11.00
+2026-06-12,dividend,,12.50

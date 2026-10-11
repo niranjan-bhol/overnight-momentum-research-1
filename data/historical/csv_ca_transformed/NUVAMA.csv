@@ -1,7 +1,7 @@
-exDate,corp_action,info,amount
-07-Aug-2024,dividend,interim,81.50
-07-Nov-2024,dividend,interim,63.00
-03-Jun-2025,dividend,interim,69.00
-11-Nov-2025,dividend,interim,70.00
-26-Dec-2025,split,10:2,
-15-May-2026,dividend,interim,14.00
+ex_date,corp_action,info,amount
+2024-08-07,dividend,interim,81.50
+2024-11-07,dividend,interim,63.00
+2025-06-03,dividend,interim,69.00
+2025-11-11,dividend,interim,70.00
+2025-12-26,split,10:2,
+2026-05-15,dividend,interim,14.00

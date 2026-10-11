@@ -1,10 +1,13 @@
 import csv
+from datetime import datetime
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_DIR = BASE_DIR / "data" / "historical" / "csv"
 OUTPUT_DIR = BASE_DIR / "data" / "historical" / "csv_transformed"
 OUTPUT_DIR_PATH = f"{BASE_DIR.name}/{OUTPUT_DIR.relative_to(BASE_DIR)}"
+
+DATE_FORMAT = "%d-%b-%Y"
 
 COLUMN_MAP = {
     "date": "mTIMESTAMP",
@@ -36,7 +39,10 @@ def clear_output_dir():
         print(f"Created output directory : {OUTPUT_DIR_PATH}")
 
 def transform_row(row):
-    return {new_col: row.get(old_col, "") for new_col, old_col in COLUMN_MAP.items()}
+    result = {new_col: row.get(old_col, "") for new_col, old_col in COLUMN_MAP.items()}
+    if result["date"]:
+        result["date"] = datetime.strptime(result["date"], DATE_FORMAT).strftime("%Y-%m-%d")
+    return result
 
 def transform_csv(input_path, output_path):
     with open(input_path, newline="") as f:

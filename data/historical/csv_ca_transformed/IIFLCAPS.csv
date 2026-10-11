@@ -1,8 +1,8 @@
-exDate,corp_action,info,amount
-13-Feb-2020,dividend,interim,2.00
-18-Mar-2021,dividend,interim,1.00
-03-Feb-2022,dividend,interim,3.00
-03-Feb-2023,dividend,interim,3.00
-15-Mar-2024,dividend,interim,3.00
-17-Feb-2025,dividend,interim,3.00
-16-Feb-2026,dividend,interim,3.00
+ex_date,corp_action,info,amount
+2020-02-13,dividend,interim,2.00
+2021-03-18,dividend,interim,1.00
+2022-02-03,dividend,interim,3.00
+2023-02-03,dividend,interim,3.00
+2024-03-15,dividend,interim,3.00
+2025-02-17,dividend,interim,3.00
+2026-02-16,dividend,interim,3.00

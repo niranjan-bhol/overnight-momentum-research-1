@@ -1,6 +1,6 @@
-exDate,corp_action,info,amount
-12-Sep-2016,dividend,,15.00
-18-Aug-2017,dividend,,34.00
-02-Aug-2018,dividend,,6.00
-19-Aug-2019,dividend,,5.00
-13-Aug-2025,dividend,,10.00
+ex_date,corp_action,info,amount
+2016-09-12,dividend,,15.00
+2017-08-18,dividend,,34.00
+2018-08-02,dividend,,6.00
+2019-08-19,dividend,,5.00
+2025-08-13,dividend,,10.00

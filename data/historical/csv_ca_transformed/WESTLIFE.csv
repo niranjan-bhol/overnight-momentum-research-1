@@ -1,4 +1,4 @@
-exDate,corp_action,info,amount
-08-Aug-2023,dividend,interim,3.45
-04-Aug-2025,dividend,interim,0.75
-07-Aug-2026,dividend,interim,0.40
+ex_date,corp_action,info,amount
+2023-08-08,dividend,interim,3.45
+2025-08-04,dividend,interim,0.75
+2026-08-07,dividend,interim,0.40

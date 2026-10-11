@@ -1,8 +1,8 @@
-exDate,corp_action,info,amount
-22-Sep-2011,dividend,,0.20
-20-Sep-2012,dividend,,0.20
-20-Sep-2022,dividend,,0.40
-21-Sep-2023,dividend,,0.40
-19-Sep-2024,dividend,,0.40
-19-Sep-2025,dividend,,0.40
-18-Sep-2026,dividend,,0.60
+ex_date,corp_action,info,amount
+2011-09-22,dividend,,0.20
+2012-09-20,dividend,,0.20
+2022-09-20,dividend,,0.40
+2023-09-21,dividend,,0.40
+2024-09-19,dividend,,0.40
+2025-09-19,dividend,,0.40
+2026-09-18,dividend,,0.60

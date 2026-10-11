@@ -1,5 +1,5 @@
-exDate,corp_action,info,amount
-01-Sep-2023,dividend,,1.50
-10-Sep-2024,dividend,,1.50
-19-Sep-2025,dividend,,1.50
-18-Aug-2026,dividend,,1.50
+ex_date,corp_action,info,amount
+2023-09-01,dividend,,1.50
+2024-09-10,dividend,,1.50
+2025-09-19,dividend,,1.50
+2026-08-18,dividend,,1.50

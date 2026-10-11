@@ -1,6 +1,6 @@
-exDate,corp_action,info,amount
-11-Sep-2014,dividend,,2.00
-10-Sep-2015,dividend,,2.00
-03-Dec-2015,buyback,,
-11-Oct-2018,buyback,,
-02-Jul-2020,buyback,,
+ex_date,corp_action,info,amount
+2014-09-11,dividend,,2.00
+2015-09-10,dividend,,2.00
+2015-12-03,buyback,,
+2018-10-11,buyback,,
+2020-07-02,buyback,,

@@ -1,8 +1,8 @@
-exDate,corp_action,info,amount
-16-Jun-2020,rights,5:14,35.00
-16-Sep-2021,dividend,,0.50
-14-Sep-2023,dividend,,2.00
-22-Mar-2024,split,10:2,
-20-Feb-2024,dividend,interim,0.50
-19-Aug-2025,dividend,interim,0.50
-24-Jul-2026,dividend,,1.00
+ex_date,corp_action,info,amount
+2020-06-16,rights,5:14,35.00
+2021-09-16,dividend,,0.50
+2023-09-14,dividend,,2.00
+2024-03-22,split,10:2,
+2024-02-20,dividend,interim,0.50
+2025-08-19,dividend,interim,0.50
+2026-07-24,dividend,,1.00

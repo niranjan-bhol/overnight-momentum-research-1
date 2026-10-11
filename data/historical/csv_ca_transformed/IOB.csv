@@ -1,6 +1,6 @@
-exDate,corp_action,info,amount
-04-Jul-2011,dividend,,5.00
-21-Jun-2012,dividend,,4.50
-20-Jun-2013,dividend,,2.00
-10-Feb-2014,dividend,interim,0.70
-19-Jun-2014,dividend,,0.50
+ex_date,corp_action,info,amount
+2011-07-04,dividend,,5.00
+2012-06-21,dividend,,4.50
+2013-06-20,dividend,,2.00
+2014-02-10,dividend,interim,0.70
+2014-06-19,dividend,,0.50

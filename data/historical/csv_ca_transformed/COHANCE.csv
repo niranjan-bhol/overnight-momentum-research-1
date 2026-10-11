@@ -1,7 +1,7 @@
-exDate,corp_action,info,amount
-25-Sep-2020,bonus,1:1,
-17-Feb-2021,dividend,interim,1.00
-13-Aug-2021,dividend,,1.00
-15-Feb-2022,dividend,"interim,special",3.00
-13-May-2022,dividend,"interim,special",2.00
-09-Sep-2022,dividend,"interim,special",6.00
+ex_date,corp_action,info,amount
+2020-09-25,bonus,1:1,
+2021-02-17,dividend,interim,1.00
+2021-08-13,dividend,,1.00
+2022-02-15,dividend,"interim,special",3.00
+2022-05-13,dividend,"interim,special",2.00
+2022-09-09,dividend,"interim,special",6.00

@@ -1,5 +1,5 @@
-exDate,corp_action,info,amount
-04-Sep-2025,dividend,interim,0.10
-25-Aug-2025,dividend,,0.10
-14-Aug-2025,rights,1:5,38.00
-02-Jul-2026,dividend,,0.05
+ex_date,corp_action,info,amount
+2025-09-04,dividend,interim,0.10
+2025-08-25,dividend,,0.10
+2025-08-14,rights,1:5,38.00
+2026-07-02,dividend,,0.05

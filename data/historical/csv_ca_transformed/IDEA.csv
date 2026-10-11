@@ -1,6 +1,6 @@
-exDate,corp_action,info,amount
-05-Sep-2013,dividend,,0.30
-18-Sep-2014,dividend,,0.40
-18-Sep-2015,dividend,,0.60
-22-Sep-2016,dividend,,0.60
-29-Mar-2019,rights,87:38,2.50
+ex_date,corp_action,info,amount
+2013-09-05,dividend,,0.30
+2014-09-18,dividend,,0.40
+2015-09-18,dividend,,0.60
+2016-09-22,dividend,,0.60
+2019-03-29,rights,87:38,2.50

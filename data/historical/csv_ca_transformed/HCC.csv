@@ -1,4 +1,4 @@
-exDate,corp_action,info,amount
-20-Nov-2018,rights,49:100,9.00
-15-Mar-2024,rights,13:118,20.00
-05-Dec-2025,rights,277:630,11.50
+ex_date,corp_action,info,amount
+2018-11-20,rights,49:100,9.00
+2024-03-15,rights,13:118,20.00
+2025-12-05,rights,277:630,11.50

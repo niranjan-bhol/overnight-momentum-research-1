@@ -1,5 +1,6 @@
 import csv
 import re
+from datetime import datetime
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -7,7 +8,9 @@ INPUT_DIR = BASE_DIR / "data" / "historical" / "csv_ca"
 OUTPUT_DIR = BASE_DIR / "data" / "historical" / "csv_ca_transformed"
 OUTPUT_DIR_PATH = f"{BASE_DIR.name}/{OUTPUT_DIR.relative_to(BASE_DIR)}"
 
-OUTPUT_FIELDNAMES = ["exDate", "corp_action", "info", "amount"]
+DATE_FORMAT = "%d-%b-%Y"
+
+OUTPUT_FIELDNAMES = ["ex_date", "corp_action", "info", "amount"]
 
 CATEGORY_PATTERNS = [
     ("dividend", re.compile(r"dividend", re.IGNORECASE)),
@@ -60,6 +63,8 @@ def category_info_amount(category, subject):
 
 def transform_row(row):
     ex_date = row.get("exDate", "") or ""
+    if ex_date:
+        ex_date = datetime.strptime(ex_date, DATE_FORMAT).strftime("%Y-%m-%d")
     subject = row.get("subject", "") or ""
     categories = [name for name, pattern in CATEGORY_PATTERNS if pattern.search(subject)]
     
@@ -81,7 +86,7 @@ def transform_row(row):
         non_blank_amounts = [float(value) for value in amounts if value]
         amount = f"{sum(non_blank_amounts):.2f}" if non_blank_amounts else ""
     
-    return {"exDate": ex_date, "corp_action": corp_action, "info": info, "amount": amount}
+    return {"ex_date": ex_date, "corp_action": corp_action, "info": info, "amount": amount}
 
 def clear_output_dir():
     if OUTPUT_DIR.exists():
