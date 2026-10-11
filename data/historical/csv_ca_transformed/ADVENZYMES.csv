@@ -1,0 +1,15 @@
+exDate,corp_action,info,amount
+25-May-2017,split,10:2,
+04-Sep-2017,dividend,,0.40
+06-Sep-2018,dividend,,0.50
+01-Aug-2019,dividend,,0.60
+09-Jul-2020,dividend,,0.60
+31-Aug-2021,dividend,,0.90
+11-Aug-2022,dividend,,1.00
+19-May-2023,dividend,interim,4.00
+04-Aug-2023,dividend,,1.00
+17-May-2024,dividend,interim,4.00
+18-Jul-2024,dividend,,1.10
+16-May-2025,dividend,interim,4.00
+23-Jul-2025,dividend,,1.20
+24-Jul-2026,dividend,,1.35

@@ -1,0 +1,14 @@
+exDate,corp_action,info,amount
+11-Feb-2013,dividend,interim,2.00
+03-Jul-2013,"bonus,split","1:2,10:5",
+23-May-2013,dividend,,2.00
+18-Feb-2014,dividend,interim,0.70
+12-Aug-2014,dividend,,0.80
+10-Feb-2015,dividend,interim,0.70
+28-Aug-2015,dividend,,0.70
+03-Feb-2016,dividend,interim,0.70
+16-Mar-2016,dividend,interim,0.80
+02-Feb-2017,dividend,interim,0.80
+21-Sep-2017,dividend,,0.80
+27-Mar-2018,dividend,interim,0.80
+12-Jul-2018,bonus,1:2,

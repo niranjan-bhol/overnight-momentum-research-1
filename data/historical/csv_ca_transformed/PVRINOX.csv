@@ -1,0 +1,14 @@
+exDate,corp_action,info,amount
+28-Jul-2011,dividend,,1.00
+04-Oct-2011,dividend,"interim,special",4.00
+20-Sep-2012,dividend,,2.00
+19-Sep-2013,dividend,,1.00
+18-Sep-2014,dividend,,2.50
+18-Sep-2015,dividend,,1.00
+20-Sep-2016,dividend,,2.00
+17-Jul-2017,dividend,,2.00
+18-Sep-2018,dividend,,2.00
+16-Jul-2019,dividend,,2.00
+05-Mar-2020,dividend,interim,4.00
+09-Jul-2020,rights,7:94,774.00
+04-Sep-2026,buyback,,

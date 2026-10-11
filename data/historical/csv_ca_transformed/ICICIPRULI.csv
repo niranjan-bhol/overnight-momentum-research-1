@@ -1,0 +1,14 @@
+exDate,corp_action,info,amount
+02-Nov-2016,dividend,interim,1.75
+07-Jul-2017,dividend,special,3.50
+02-Nov-2017,dividend,"interim,special",3.40
+18-Jun-2018,dividend,special,3.30
+01-Nov-2018,dividend,interim,1.60
+09-Jul-2019,dividend,,1.55
+31-Oct-2019,dividend,interim,0.80
+16-Jun-2021,dividend,,2.00
+16-Jun-2022,dividend,,0.55
+13-Jul-2023,dividend,,0.60
+13-Jun-2024,dividend,,0.60
+12-Jun-2025,dividend,,0.85
+05-Jun-2026,dividend,,1.65

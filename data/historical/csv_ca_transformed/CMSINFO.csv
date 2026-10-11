@@ -1,0 +1,10 @@
+exDate,corp_action,info,amount
+13-Sep-2022,dividend,,1.00
+30-Aug-2023,dividend,,4.75
+06-Feb-2024,dividend,interim,2.50
+28-May-2024,dividend,,3.25
+11-Feb-2025,dividend,interim,3.25
+23-May-2025,dividend,special,6.25
+18-Feb-2026,dividend,interim,2.75
+22-May-2026,buyback,,
+11-Sep-2026,dividend,,2.50

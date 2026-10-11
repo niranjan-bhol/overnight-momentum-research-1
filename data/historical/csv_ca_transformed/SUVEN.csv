@@ -1,0 +1,11 @@
+exDate,corp_action,info,amount
+01-Aug-2011,dividend,,0.25
+17-Sep-2012,dividend,,0.30
+01-Aug-2013,dividend,,0.30
+24-Jul-2014,dividend,special,2.50
+23-Jul-2015,dividend,,0.60
+14-Mar-2016,dividend,"interim,special",2.00
+08-Feb-2017,dividend,interim,1.00
+06-Feb-2018,dividend,interim,1.50
+14-Feb-2019,dividend,interim,1.50
+17-Oct-2022,rights,1:2,54.00
