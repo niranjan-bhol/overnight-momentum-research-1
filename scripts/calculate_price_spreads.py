@@ -7,14 +7,7 @@ OUTPUT_DIR = BASE_DIR / "data" / "calculated" / "price_spreads"
 OUTPUT_DIR_PATH = f"{BASE_DIR.name}/{OUTPUT_DIR.relative_to(BASE_DIR)}"
 
 PAIRS = [
-    ("close", "open"),
-    ("high", "low"),
-    ("high", "open"),
-    ("high", "close"),
-    ("open", "low"),
-    ("close", "low"),
-    ("open", "vwap"),
-    ("close", "vwap"),
+    ("close", "vwap")
 ]
 
 ABS_FIELDNAMES = [f"abs_{a}-{b}" for a, b in PAIRS]

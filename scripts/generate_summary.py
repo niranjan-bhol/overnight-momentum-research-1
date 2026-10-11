@@ -3,7 +3,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 TRADES_DIR = BASE_DIR / "data" / "calculated" / "trades"
-OUTPUT_DIR = BASE_DIR / "data" / "result" / "summary"
+OUTPUT_DIR = BASE_DIR / "data" / "results" / "summary"
 OUTPUT_PATH = OUTPUT_DIR / "summary.csv"
 OUTPUT_PATH_STR = f"{BASE_DIR.name}/{OUTPUT_PATH.relative_to(BASE_DIR)}"
 
