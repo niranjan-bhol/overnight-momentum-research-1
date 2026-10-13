@@ -1,0 +1,13 @@
+ex_date,corp_action,info,amount
+2015-08-27,dividend,,1.00
+2021-02-04,dividend,interim,5.00
+2021-10-26,bonus,1:1,
+2021-10-26,split,10:5,
+2022-08-25,dividend,,8.50
+2023-03-31,buyback,,
+2023-08-18,dividend,,4.00
+2024-08-16,dividend,special,6.25
+2024-06-28,buyback,,
+2024-10-04,split,5:1,
+2025-08-14,dividend,,1.00
+2026-08-14,dividend,,1.00

@@ -1,0 +1,14 @@
+ex_date,corp_action,info,amount
+2015-03-30,dividend,,5.50
+2016-04-12,dividend,,5.50
+2017-04-12,dividend,,5.50
+2018-04-12,dividend,,6.00
+2019-04-25,dividend,,6.00
+2020-04-23,dividend,,8.00
+2021-04-15,dividend,,8.50
+2022-04-28,dividend,,12.50
+2023-04-28,dividend,,15.00
+2024-07-25,split,10:2,
+2024-06-13,dividend,,17.50
+2025-05-02,dividend,,4.00
+2026-05-08,dividend,,4.40

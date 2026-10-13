@@ -1,0 +1,17 @@
+ex_date,corp_action,info,amount
+2015-07-22,dividend,,1.00
+2016-07-13,dividend,,2.50
+2017-03-09,dividend,interim,6.00
+2017-11-07,dividend,interim,6.00
+2018-04-19,split,10:2,
+2018-07-18,dividend,,1.20
+2019-01-28,dividend,interim,3.50
+2020-02-25,dividend,"interim,special",7.00
+2021-02-01,dividend,interim,7.00
+2022-02-01,dividend,interim,10.00
+2022-04-11,split,2:1,
+2023-02-10,dividend,interim,5.50
+2024-01-29,dividend,interim,5.50
+2025-01-16,dividend,interim,5.50
+2025-10-27,dividend,interim,6.00
+2026-08-04,dividend,interim,4.50

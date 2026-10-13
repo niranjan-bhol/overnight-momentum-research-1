@@ -1,0 +1,15 @@
+ex_date,corp_action,info,amount
+2015-09-21,dividend,,0.20
+2016-09-21,dividend,,0.25
+2017-09-18,dividend,,0.25
+2018-09-18,dividend,,0.25
+2019-09-18,dividend,,0.30
+2020-02-26,dividend,interim,0.20
+2020-09-16,dividend,,0.10
+2021-09-16,dividend,,0.35
+2022-09-15,dividend,,0.40
+2023-09-15,dividend,,0.45
+2024-09-13,dividend,,0.50
+2025-09-12,dividend,,1.00
+2026-02-13,dividend,interim,2.00
+2026-09-11,dividend,,1.00

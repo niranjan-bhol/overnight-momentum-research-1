@@ -2,7 +2,7 @@ import csv
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-INPUT_DIR = BASE_DIR / "data" / "historical" / "csv_transformed"
+INPUT_DIR = BASE_DIR / "data" / "nse" / "csv_transformed"
 OUTPUT_DIR = BASE_DIR / "data" / "calculated" / "price_spreads"
 OUTPUT_DIR_PATH = f"{BASE_DIR.name}/{OUTPUT_DIR.relative_to(BASE_DIR)}"
 

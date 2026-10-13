@@ -1,0 +1,11 @@
+ex_date,corp_action,info,amount
+2020-03-12,dividend,interim,10.00
+2021-08-23,dividend,,15.00
+2022-05-10,buyback,,
+2022-09-01,dividend,,2.00
+2023-05-11,dividend,,20.00
+2023-08-25,buyback,,
+2023-06-21,bonus,1:1,
+2024-06-07,dividend,,20.00
+2025-06-06,dividend,special,50.00
+2026-06-19,dividend,special,60.00

@@ -1,0 +1,15 @@
+ex_date,corp_action,info,amount
+2015-09-14,dividend,,3.00
+2018-02-15,dividend,interim,30.00
+2018-07-13,dividend,,50.00
+2018-11-12,dividend,interim,30.00
+2019-02-07,buyback,,
+2019-08-09,dividend,,50.00
+2020-02-17,dividend,interim,25.00
+2021-07-19,dividend,,3.00
+2022-08-24,dividend,,40.00
+2023-08-24,dividend,,42.50
+2024-07-31,dividend,,22.50
+2024-10-18,split,10:2,
+2025-08-13,dividend,,1.80
+2026-07-22,dividend,,3.40

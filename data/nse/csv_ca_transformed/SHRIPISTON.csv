@@ -1,0 +1,9 @@
+ex_date,corp_action,info,amount
+2023-07-24,bonus,1:1,
+2023-06-23,dividend,,5.00
+2024-02-09,dividend,interim,5.00
+2024-07-16,dividend,,5.00
+2025-02-07,dividend,interim,5.00
+2025-07-25,dividend,,5.00
+2026-02-06,dividend,interim,5.00
+2026-07-20,dividend,,5.00

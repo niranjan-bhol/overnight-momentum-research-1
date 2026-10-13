@@ -1,0 +1,7 @@
+ex_date,corp_action,info,amount
+2015-05-21,dividend,,9.00
+2016-05-30,dividend,,10.00
+2017-05-29,dividend,,12.00
+2017-09-21,split,10:2,
+2018-06-04,dividend,,2.70
+2019-06-03,dividend,,2.00
