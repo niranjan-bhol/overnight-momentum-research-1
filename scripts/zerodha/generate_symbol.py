@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-SYMBOLS_FILE = BASE_DIR / "data" / "nse" / "symbol" / "NIFTY_50.txt"
+SYMBOLS_FILE = BASE_DIR / "data" / "nse" / "symbol" / "NIFTY_TOTAL_MARKET.txt"
 INSTRUMENTS_CSV = BASE_DIR / "data" / "zerodha" / "instruments" / "instruments.csv"
 OUTPUT_JSON = BASE_DIR / "data" / "zerodha" / "symbol" / "symbols.json"
 
